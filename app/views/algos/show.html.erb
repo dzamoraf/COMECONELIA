@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @algo.nombre %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @algo.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_algo_path(@algo) %> |
+<%= link_to 'Back', algos_path %>

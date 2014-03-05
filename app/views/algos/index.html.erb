@@ -1,0 +1,29 @@
+<h1>Listing algos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @algos.each do |algo| %>
+      <tr>
+        <td><%= algo.nombre %></td>
+        <td><%= algo.fecha %></td>
+        <td><%= link_to 'Show', algo %></td>
+        <td><%= link_to 'Edit', edit_algo_path(algo) %></td>
+        <td><%= link_to 'Destroy', algo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Algo', new_algo_path %>
